@@ -1,0 +1,51 @@
+// CARD JUEGOS
+
+.cards{
+
+&__games{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color:#fff;
+    padding: 20px;
+    margin: 20px 10px 30px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.336);
+    box-shadow: 0 5px 8px #bced09a0;
+    border: #00f6ed solid 2px;
+    
+}
+&__games img{
+    width: 200px;
+    padding: 20px;
+}
+
+&__games a{
+    text-decoration: none;
+    color: #00f6ed;
+    padding: 10px;
+    margin: 10px 20px;
+    display: block;
+    border: 1px solid #00f6ed;
+    border-radius: 5px;
+    background-color: #222e50;
+    font-family:'Covered By Your Grace';
+}
+
+&__games:hover{
+    transform: scaleX(1.05);
+    transform: scaleY(1.08);
+    transition: all 400ms;
+}
+
+&__games a:hover{
+    background-color:#00f6ed ;
+    color: #222e50;
+    border: 3px solid;
+    transition: all 250ms;
+}
+&__games h3{
+    font-family: 'Blinker', sans-serif;
+}
+}

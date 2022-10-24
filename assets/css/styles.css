@@ -1,0 +1,450 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+span,
+a,
+li,
+ul,
+ol,
+blockquote,
+pre,
+code,
+input,
+textarea,
+select,
+nav,
+footer,
+header,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+.frame-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7);
+}
+.frame-container__header {
+  grid-column: 1/5;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: center;
+  background-color: #222e50;
+  border-bottom: #bced09 solid 3px;
+  font-family: "Covered By Your Grace";
+  font-size: 20px;
+}
+.frame-container__header a {
+  text-decoration: none;
+  color: #00f6ed;
+}
+.frame-container__header a:hover {
+  color: #bced09;
+}
+.frame-container__nav {
+  grid-column: 1/5;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  border-bottom: #bced09 double 3px;
+  background-image: url(/assets/img/fondm.jpg);
+}
+.frame-container__nav--lgn {
+  height: 70px;
+  margin: 20px;
+}
+.frame-container__nav--menu {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 40px;
+  font-size: 15px;
+  display: inline-block;
+  padding: 10px;
+}
+.frame-container__nav--menu span {
+  padding-left: 10px;
+  color: #00f6ed;
+  font-family: "Blinker", sans-serif;
+}
+.frame-container__nav a:hover {
+  color: #bced09;
+}
+.frame-container__nav span:hover {
+  color: #bced09;
+}
+.frame-container__slide {
+  grid-column: 1/5;
+  grid-row: 3/4;
+}
+.frame-container__platform {
+  grid-column: 1/5;
+  grid-row: 4/5;
+  border-top: #bced09 double 3px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 4px;
+  color: #fff;
+  font-family: "Covered By Your Grace";
+  font-size: 30px;
+  box-shadow: 0px 4px #bced09;
+}
+.frame-container__platform img {
+  height: 30px;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(188, 237, 9, 0.6274509804);
+  border-radius: 4px;
+}
+.frame-container__platform img:hover {
+  box-shadow: 0 2px 5px #00f6ed;
+  border-radius: 4px;
+  background-color: #222e50;
+}
+.frame-container__section1 {
+  grid-column: 1/5;
+  grid-row: 5/7;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  background-image: url(/assets/img/fondm.jpg);
+  width: 100%;
+}
+.frame-container__footer {
+  grid-column: 1/5;
+  grid-row: 7;
+  display: flex;
+  justify-content: space-around;
+  background-color: #222e50;
+  border-top: 4px double #bced09;
+  color: #bced09;
+  padding: 40px;
+  font-family: "Blinker", sans-serif;
+  font-size: 15px;
+}
+.frame-container__footer--1 img {
+  width: 250px;
+}
+.frame-container__footer--2 p {
+  font-family: "Covered By Your Grace";
+  color: #fff;
+}
+.frame-container__footer--3 p {
+  font-family: "Covered By Your Grace";
+  color: #fff;
+}
+.frame-container__footer--4 img {
+  width: 200px;
+  text-align: left;
+}
+
+.frame-container__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #000;
+}
+.frame-container__slide--box {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.frame-container__slide img {
+  max-width: 100%;
+}
+
+.gallery {
+  display: flex;
+  transform: translate3d(0, 0, 0);
+  transition: all 600ms;
+  animation-name: autoplay;
+  animation-duration: 25s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+.gallery__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-grow: 0;
+  max-width: 100%;
+}
+
+.navgallery {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.navgallery__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #fffae0;
+  width: 15px;
+  height: 5px;
+  border-radius: 2px;
+  overflow: hidden;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 10px;
+  text-align: center;
+  transition: all 300ms;
+}
+.navgallery__item:hover {
+  transform: scale(2);
+}
+
+input[id="1"]:checked ~ .gallery {
+  animation: auto;
+  transform: translate3d(0, 0, 0);
+}
+
+input[id="1"]:checked ~ .navgallery .navgallery__item[for="1"] {
+  background-color: #00f6ed;
+}
+
+input[id="2"]:checked ~ .gallery {
+  animation: none;
+  transform: translate3d(-100%, 0, 0);
+}
+
+input[id="2"]:checked ~ .navgallery .navgallery__item[for="2"] {
+  background-color: #00f6ed;
+}
+
+input[id="3"]:checked ~ .gallery {
+  animation: none;
+  transform: translate3d(-200%, 0, 0);
+}
+
+input[id="3"]:checked ~ .navgallery .navgallery__item[for="3"] {
+  background-color: #00f6ed;
+}
+
+input[id="4"]:checked ~ .gallery {
+  animation: auto;
+  transform: translate3d(-300%, 0, 0);
+}
+
+input[id="4"]:checked ~ .navgallery .navgallery__item[for="4"] {
+  background-color: #00f6ed;
+}
+
+input[id="5"]:checked ~ .gallery {
+  animation: none;
+  transform: translate3d(-400%, 0, 0);
+}
+
+input[id="5"]:checked ~ .navgallery .navgallery__item[for="5"] {
+  background-color: #00f6ed;
+}
+
+input[id="6"]:checked ~ .gallery {
+  animation: none;
+  transform: translate3d(-500%, 0, 0);
+}
+
+input[id="6"]:checked ~ .navgallery .navgallery__item[for="6"] {
+  background-color: #00f6ed;
+}
+
+@keyframes autoplay {
+  16% {
+    transform: translate3d(0%, 0, 0);
+  }
+  32% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  48% {
+    transform: translate3d(-200%, 0, 0);
+  }
+  64% {
+    transform: translate3d(-300%, 0, 0);
+  }
+  80% {
+    transform: translate3d(-400%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-500%, 0, 0);
+  }
+}
+.cards__games {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  margin: 20px 10px 30px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.336);
+  box-shadow: 0 5px 8px rgba(188, 237, 9, 0.6274509804);
+  border: #00f6ed solid 2px;
+}
+.cards__games img {
+  width: 200px;
+  padding: 20px;
+}
+.cards__games a {
+  text-decoration: none;
+  color: #00f6ed;
+  padding: 10px;
+  margin: 10px 20px;
+  display: block;
+  border: 1px solid #00f6ed;
+  border-radius: 5px;
+  background-color: #222e50;
+  font-family: "Covered By Your Grace";
+}
+.cards__games:hover {
+  transform: scaleX(1.05);
+  transform: scaleY(1.08);
+  transition: all 400ms;
+}
+.cards__games a:hover {
+  background-color: #00f6ed;
+  color: #222e50;
+  border: 3px solid;
+  transition: all 250ms;
+}
+.cards__games h3 {
+  font-family: "Blinker", sans-serif;
+}
+
+@media (max-width: 960px) {
+  .frame-container__section1 {
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+  }
+  .frame-container__nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .frame-container__nav--menu {
+    margin: 0px 20px;
+  }
+  .frame-container__nav a {
+    font-size: 12px;
+    padding: 0px 0px 20px;
+  }
+  .frame-container__platform {
+    font-size: 30px;
+  }
+  .frame-container__platform img {
+    height: 25px;
+    padding: 10px 15px;
+  }
+  .frame-container__footer {
+    display: flex;
+    flex-flow: wrap;
+  }
+  .frame-container__footer--4 img {
+    width: 120px;
+  }
+  .frame-container__footer--4 {
+    margin: 20px 10px;
+  }
+  .frame-container__footer--3 {
+    margin: 20px 10px;
+  }
+  .frame-container__footer--2 {
+    margin: 20px 10px;
+  }
+  .frame-container__footer--1 {
+    margin: 20px 10px;
+  }
+  .cards__games {
+    margin: 20px 10px;
+    padding: 10px;
+    font-size: 10px;
+  }
+  .cards__games img {
+    width: 160px;
+    padding: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .frame-container__header a {
+    font-size: 15px;
+  }
+  .frame-container__nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .frame-container__nav--menu {
+    margin: 0px 5px;
+  }
+  .frame-container__nav a {
+    font-size: 10px;
+    padding: 0px 0px 10px;
+  }
+  .frame-container__nav a img {
+    height: 65px;
+  }
+  .frame-container__platform {
+    font-size: 20px;
+  }
+  .frame-container__platform img {
+    height: 15px;
+    padding: 10px 15px;
+  }
+  .frame-container__section1 {
+    display: flex;
+    flex-flow: wrap;
+  }
+  .frame-container__footer {
+    display: flex;
+    flex-flow: wrap;
+  }
+  .frame-container__footer--4 img {
+    width: 120px;
+  }
+  .frame-container__footer--3 {
+    margin: 10px 10px;
+  }
+  .frame-container__footer--2 {
+    margin: 10px 10px;
+  }
+  .frame-container__footer--1 {
+    margin: 20px 10px;
+  }
+  .frame-container__footer--1 img {
+    margin: 5px 10px;
+  }
+  .navgallery__item {
+    width: 4px;
+    height: 3px;
+    margin: 0 10px;
+  }
+  .cards__games {
+    margin: 10px;
+    padding: 10px;
+    font-size: 10px;
+  }
+  .cards__games img {
+    width: 130px;
+    padding: 10px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

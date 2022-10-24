@@ -55,7 +55,7 @@ section {
   align-items: center;
   padding: 0px 20px;
   border-bottom: #bced09 double 3px;
-  background-image: url("/img/fondm.jpg");
+  background-image: url("../img/fondm.jpg");
 }
 .frame-container__nav--lgn {
   height: 70px;
@@ -116,7 +116,7 @@ section {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
-  background-image: url("/img/fondm.jpg");
+  background-image: url("../img/fondm.jpg");
   width: 100%;
 }
 .frame-container__footer {
